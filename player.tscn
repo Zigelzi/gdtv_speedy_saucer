@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://btvos3tlo24v0"]
+
+[ext_resource type="Texture2D" uid="uid://dl4md4g5k0y5v" path="res://assets/kenney_space-shooter-redux/PNG/playerShip3_orange.png" id="1_7duqk"]
+
+[node name="Player" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Model" type="Sprite2D" parent="."]
+scale = Vector2(1, 1.35)
+texture = ExtResource("1_7duqk")

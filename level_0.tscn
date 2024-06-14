@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg2qlge63m4e3"]
+
+[ext_resource type="PackedScene" uid="uid://btvos3tlo24v0" path="res://player.tscn" id="2_4rsf5"]
+[ext_resource type="Texture2D" uid="uid://lkstui6hsxf4" path="res://assets/sprites/Icywitct_Blue_500.png" id="2_moo7p"]
+
+[node name="Level_0" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_moo7p")
+
+[node name="Player" parent="." instance=ExtResource("2_4rsf5")]
+position = Vector2(519, 219)
