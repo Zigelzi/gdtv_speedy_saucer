@@ -1,16 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://bg2qlge63m4e3"]
+[gd_scene load_steps=5 format=3 uid="uid://bg2qlge63m4e3"]
 
+[ext_resource type="Texture2D" uid="uid://cbpdadjamfsgd" path="res://assets/sprites/Icywitct_Green_500.png" id="1_3tci6"]
 [ext_resource type="PackedScene" uid="uid://btvos3tlo24v0" path="res://player.tscn" id="2_4rsf5"]
 [ext_resource type="Texture2D" uid="uid://lkstui6hsxf4" path="res://assets/sprites/Icywitct_Blue_500.png" id="2_moo7p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_saqry"]
+size = Vector2(1168, 20)
 
 [node name="Level_0" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_moo7p")
 
+[node name="Environment" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="RigidBody2D" parent="Environment"]
+position = Vector2(568, 648)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor"]
+shape = SubResource("RectangleShape2D_saqry")
+
+[node name="Sprite2D" type="Sprite2D" parent="Environment/Floor"]
+scale = Vector2(4.68, 0.16)
+texture = ExtResource("1_3tci6")
+
 [node name="Player" parent="." instance=ExtResource("2_4rsf5")]
 position = Vector2(519, 219)
+gravity_scale = 1.0

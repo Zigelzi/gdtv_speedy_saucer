@@ -8,3 +8,6 @@ gravity_scale = 0.0
 [node name="Model" type="Sprite2D" parent="."]
 scale = Vector2(1, 1.35)
 texture = ExtResource("1_7duqk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -55, -55, 50, 55, 50)
