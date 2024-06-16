@@ -20,17 +20,53 @@ texture = ExtResource("2_moo7p")
 [node name="Environment" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
-[node name="Floor" type="RigidBody2D" parent="Environment"]
+[node name="Floor_Top" type="RigidBody2D" parent="Environment"]
 position = Vector2(568, 648)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor_Top"]
 shape = SubResource("RectangleShape2D_saqry")
 
-[node name="Sprite2D" type="Sprite2D" parent="Environment/Floor"]
+[node name="Sprite2D" type="Sprite2D" parent="Environment/Floor_Top"]
+scale = Vector2(4.68, 0.16)
+texture = ExtResource("1_3tci6")
+
+[node name="Floor_Bot" type="RigidBody2D" parent="Environment"]
+position = Vector2(568, 0)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor_Bot"]
+shape = SubResource("RectangleShape2D_saqry")
+
+[node name="Sprite2D" type="Sprite2D" parent="Environment/Floor_Bot"]
+scale = Vector2(4.68, 0.16)
+texture = ExtResource("1_3tci6")
+
+[node name="Floor_Left" type="RigidBody2D" parent="Environment"]
+position = Vector2(-15, 276)
+rotation = 1.5708
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Environment/Floor_Left"]
+scale = Vector2(4.68, 0.16)
+texture = ExtResource("1_3tci6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor_Left"]
+shape = SubResource("RectangleShape2D_saqry")
+
+[node name="Floor_Left2" type="RigidBody2D" parent="Environment"]
+position = Vector2(1160, 283)
+rotation = 1.5708
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Floor_Left2"]
+shape = SubResource("RectangleShape2D_saqry")
+
+[node name="Sprite2D" type="Sprite2D" parent="Environment/Floor_Left2"]
 scale = Vector2(4.68, 0.16)
 texture = ExtResource("1_3tci6")
 
 [node name="Player" parent="." instance=ExtResource("2_4rsf5")]
-position = Vector2(519, 219)
-gravity_scale = 1.0
+position = Vector2(500, 80)
+gravity_scale = 0.0
+_movement_speed = 50
