@@ -8,7 +8,7 @@ var _start_position
 func _ready():
 	_start_position = position
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var movement_direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	apply_force(movement_direction * _movement_speed)
 	
