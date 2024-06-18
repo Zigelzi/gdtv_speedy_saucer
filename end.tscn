@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://nd2uha1s2q1w"]
+
+[ext_resource type="Texture2D" uid="uid://cbpdadjamfsgd" path="res://assets/sprites/Icywitct_Green_500.png" id="1_veqmn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6n4i"]
+size = Vector2(125, 125)
+
+[node name="End" type="Area2D"]
+z_index = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p6n4i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_veqmn")
